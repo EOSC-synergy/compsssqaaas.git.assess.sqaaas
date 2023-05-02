@@ -15,64 +15,70 @@ sqa_criteria:
     repos:
       github.com/lezzidan/compsssqaaas git:
         commands:
-        - /usr/bin/env sh .sqa/script.wheezy-eggplant-seahorse.sh
-        container: qc.acc_whiny-firebrick-seal
+        - /usr/bin/env sh .sqa/script.freaky-copper-fly.sh
+        container: qc.acc_stealthy-coral-stingray
   QC.Doc:
     repos:
       github.com/lezzidan/compsssqaaas find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-eggplant-fossa.sh
-        container: qc.doc_fuzzy-pumpkin-urchin
+        - /usr/bin/env sh .sqa/script.goopy-dandelion-pinscher.sh
+        container: qc.doc_shabby-cerise-fish
       github.com/lezzidan/compsssqaaas git:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-harlequin-peccary.sh
-        container: qc.doc_slaphappy-cyan-insect
+        - /usr/bin/env sh .sqa/script.slaphappy-ruby-snail.sh
+        container: qc.doc_sleepy-cyan-barnacle
       github.com/lezzidan/compsssqaaas markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.pokey-cyan-frog.sh
-        container: qc.doc_whiny-saffron-neanderthal
+        - /usr/bin/env sh .sqa/script.droopy-mauve-dodo.sh
+        container: qc.doc_randy-pear-eagle
       github.com/lezzidan/compsssqaaas restructuredtext-lint:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-lemon-hummingbird.sh
-        container: qc.doc_zippy-razzmatazz-goat
+        - /usr/bin/env sh .sqa/script.hasty-aqua-stingray.sh
+        container: qc.doc_jumpy-apricot-caiman
   QC.Lic:
     repos:
       github.com/lezzidan/compsssqaaas licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.wheezy-heliotrope-hyena.sh
-        container: qc.lic_crabby-amethyst-bulldog
+        - /usr/bin/env sh .sqa/script.foggy-orange-badger.sh
+        container: qc.lic_squirrely-malachite-clam
+  QC.Met:
+    repos:
+      github.com/lezzidan/compsssqaaas cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.chewy-copper-tang.sh
+        container: qc.met_skanky-rose-angora
   QC.Sec:
     repos:
       github.com/lezzidan/compsssqaaas bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.scaly-tangerine-hummingbird.sh
-        container: qc.sec_thirsty-beige-foxhound
+        - /usr/bin/env sh .sqa/script.shaggy-wheat-gibbon.sh
+        container: qc.sec_geeky-cinnabar-koala
   QC.Sty:
     repos:
       github.com/lezzidan/compsssqaaas checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-orchid-dingo.sh
-        container: qc.sty_sloppy-lavender-gopher
+        - /usr/bin/env sh .sqa/script.slaphappy-bronze-lionfish.sh
+        container: qc.sty_pasty-indigo-zebra
       github.com/lezzidan/compsssqaaas flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-eggplant-wolf.sh
-        container: qc.sty_bumpy-cornflower-bandicoot
+        - /usr/bin/env sh .sqa/script.randy-green-hornet.sh
+        container: qc.sty_jumpy-sepia-gorilla
       github.com/lezzidan/compsssqaaas hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-aquamarine-newfoundland.sh
-        container: qc.sty_shaggy-amethyst-frog
+        - /usr/bin/env sh .sqa/script.breezy-buff-molly.sh
+        container: qc.sty_whiny-gold-chin
       github.com/lezzidan/compsssqaaas jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-maroon-boar.sh
-        container: qc.sty_queasy-myrtle-frigatebird
+        - /usr/bin/env sh .sqa/script.stealthy-silver-seal.sh
+        container: qc.sty_stinky-dandelion-devil
       github.com/lezzidan/compsssqaaas rubocop:
         commands:
-        - /usr/bin/env sh .sqa/script.flaky-wisteria-mist.sh
-        container: qc.sty_beady-olive-kingfisher
+        - /usr/bin/env sh .sqa/script.lovely-maroon-gharial.sh
+        container: qc.sty_slaphappy-mustard-fox
   QC.Ver:
     repos:
       github.com/lezzidan/compsssqaaas get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.skinny-emerald-skunk.sh
-        container: qc.ver_stinky-indigo-serval
+        - /usr/bin/env sh .sqa/script.lousy-thistle-bandicoot.sh
+        container: qc.ver_stinky-xanthic-drever
 timeout: 5400
