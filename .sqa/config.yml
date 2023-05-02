@@ -1,0 +1,78 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.10
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/lezzidan/compsssqaaas:
+      branch: main
+      repo: https://github.com/lezzidan/compsssqaaas.git
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/lezzidan/compsssqaaas git:
+        commands:
+        - /usr/bin/env sh .sqa/script.randy-carmine-albatross.sh
+        container: qc.acc_paltry-black-squirt
+  QC.Doc:
+    repos:
+      github.com/lezzidan/compsssqaaas find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.skinny-charcoal-dolphin.sh
+        container: qc.doc_woolly-russet-labradoodle
+      github.com/lezzidan/compsssqaaas git:
+        commands:
+        - /usr/bin/env sh .sqa/script.thirsty-orchid-mole.sh
+        container: qc.doc_jumpy-jade-albatross
+      github.com/lezzidan/compsssqaaas markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.hilly-vermilion-sloth.sh
+        container: qc.doc_squeaky-salmon-coral
+      github.com/lezzidan/compsssqaaas restructuredtext-lint:
+        commands:
+        - /usr/bin/env sh .sqa/script.cranky-tangerine-hornet.sh
+        container: qc.doc_dorky-chocolate-earwig
+  QC.Lic:
+    repos:
+      github.com/lezzidan/compsssqaaas licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.woolly-pumpkin-drever.sh
+        container: qc.lic_ready-peach-mastiff
+  QC.Sec:
+    repos:
+      github.com/lezzidan/compsssqaaas bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.flaky-seashell-mongrel.sh
+        container: qc.sec_lousy-puce-axolotl
+  QC.Sty:
+    repos:
+      github.com/lezzidan/compsssqaaas checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.stinky-tomato-squirt.sh
+        container: qc.sty_pasty-chartreuse-millipede
+      github.com/lezzidan/compsssqaaas flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.nippy-cerise-eagle.sh
+        container: qc.sty_crappy-salmon-binturong
+      github.com/lezzidan/compsssqaaas hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.jumpy-mustard-tarsier.sh
+        container: qc.sty_squirrely-salmon-hyrax
+      github.com/lezzidan/compsssqaaas jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.lanky-turquoise-kiwi.sh
+        container: qc.sty_hasty-myrtle-beaver
+      github.com/lezzidan/compsssqaaas rubocop:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaggy-lemon-shrimp.sh
+        container: qc.sty_paltry-lavender-monkey
+  QC.Ver:
+    repos:
+      github.com/lezzidan/compsssqaaas get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.craggy-wisteria-chameleon.sh
+        container: qc.ver_crappy-ecru-forest
+timeout: 5400
